@@ -1,0 +1,49 @@
+<md-dialog aria-label="New Meeting">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>New Meeting</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="newMeeting.cancel()">
+        <md-icon aria-label="Close dialog">close</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <md-content layout-padding>
+      <div class="md-inline-form" layout-padding>
+        <form name="newMeetingForm">
+
+          <div layout-gt-sm="row">
+            <md-input-container flex class="md-block">
+              <label>Title</label>
+              <input ng-model="newMeeting.title" required name="title">
+              <div ng-messages="newMeetingForm.title.$error">
+                <div ng-message="required">You need a title</div>
+              </div>
+            </md-input-container>
+
+            <md-datepicker ng-model="newMeeting.date" md-placeholder="Enter date" required name="dateField"
+            md-min-date="newMeeting.today"
+            >
+            </md-datepicker>
+          </div>
+
+          <md-input-container class="md-block">
+            <label>Description</label>
+            <textarea columns="1" rows="5"></textarea>
+          </md-input-container>
+
+
+          <span flex></span>
+
+          <div layout="row">
+            <span flex></span>
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+            <md-button class="md-raised md-primary">Submit</md-button>
+          </div>
+
+        </form>
+      </div>
+    </md-content>
+  </md-dialog-content>
+</md-dialog>

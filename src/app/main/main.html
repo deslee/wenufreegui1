@@ -1,0 +1,48 @@
+<div layout="column" layout-fill>
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h1>"When Are You Free" Meeting Planner</h1>
+      <span flex></span>
+      <md-button class="md-fab md-mini" aria-label="New Meeting" ng-click="main.showNewMeeting($event)">
+        <md-icon>add</md-icon>
+        <md-tooltip md-direction="left">
+          Create a new meeting
+        </md-tooltip>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-content layout="column" flex layout-padding>
+    <div layout-gt-sm="row">
+      <div class="md-padding">
+        <h2>Simple, universal meeting planner</h2>
+      </div>
+    </div>
+
+    <div layout-gt-sm="row">
+      <div class="md-padding">
+        <h3>Who is this for?</h3>
+        <p>This is for people who want a simple, hassle free way to schedule meetings with friends.
+          When Are You Free works across timezones and allows basic collaboration to find the best meeting time
+          possible.</p>
+      </div>
+
+      <div class="md-padding">
+        <h3>How do I use it?</h3>
+        <p>To use it, tap the button to create a new meeting. Give the meeting a title and date. Then hit submit.</p>
+        <p>You will be given a link to share with your meeting partners. They will be able to suggest a time or
+          vote on a previously suggested time. Times will automatically be converted between timezones.</p>
+      </div>
+    </div>
+
+    <md-button ng-click="main.showNewMeeting($event)" class="md-primary">Create a new meeting</md-button>
+
+    <span flex></span>
+
+    <div layout="row" layout-align="end end">
+      <span class="md-caption">Created by <a href="https://deslee.me">Desmond Lee</a></span>
+    </div>
+  </md-content>
+
+</div>
